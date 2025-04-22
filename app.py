@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 def generate_product_caption(user_input, max_tokens=500):
-    prompt = f"Write a sophisticated and appealing e-commerce product caption based on: '{user_input}'"
+    prompt = f"Write a short one liner, innovative caption on'{user_input}'"
 
     response = ollama.chat(
         model='mistral',
