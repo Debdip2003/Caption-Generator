@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Caption Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+        background: #f4f4f4;
+      }
+      .container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input,
+      button {
+        padding: 0.5rem;
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .caption {
+        margin-top: 2rem;
+        font-weight: bold;
+        background: #e8f5e9;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🛍 Product Caption Generator</h1>
+      <form method="POST">
+        <label for="product">Enter product description:</label>
+        <input type="text" name="product" id="product" required />
+        <button type="submit">Generate Caption</button>
+      </form>
+
+      {% if caption %}
+      <div class="caption">{{ caption }}</div>
+      {% endif %}
+    </div>
+  </body>
+</html>
